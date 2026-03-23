@@ -1,0 +1,4 @@
+GET {{local_url}}/chatWithModel
+Content-Type: application/text
+
+Give 10000 token essay on global warming

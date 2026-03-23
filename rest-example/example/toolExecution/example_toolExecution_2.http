@@ -1,0 +1,4 @@
+GET {{local_url}}/toolExecution
+Content-Type: application/text
+
+What day would it be tomorrow?

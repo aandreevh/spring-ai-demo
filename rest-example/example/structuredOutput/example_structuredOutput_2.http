@@ -1,0 +1,4 @@
+GET {{local_url}}/structuredOutput
+Content-Type: application/text
+
+I should clean my wardrobe when I have free time

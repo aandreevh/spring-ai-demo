@@ -1,0 +1,4 @@
+GET {{local_url}}/toolExecution
+Content-Type: application/text
+
+What is the current date and time?

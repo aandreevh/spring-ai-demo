@@ -1,0 +1,14 @@
+spring:
+  ai:
+    #Chat Model configuration
+    openai:
+      #TODO: OpenRouter: Unified API Gateway (500+ LLMs) and billing (~5% more expensive), ability to use routing models
+      base-url: https://openrouter.ai/api/
+      api-key: ${OPEN_ROUTER_API_KEY} # Always use env
+      chat:
+        options:
+          model: openai/gpt-5.4-nano
+          temperature: 0.1 # TODO: Explain temperature
+          #TODO: Explain tokens & limits
+          max-completion-tokens: 1000
+          max-tokens: 2000

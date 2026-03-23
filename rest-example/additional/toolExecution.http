@@ -1,0 +1,36 @@
+### Call GPT-5.4-Mini with Tool Definition
+POST {{base_url}}/chat/completions
+Content-Type: application/json
+Authorization: Bearer {{api_key}}
+
+{
+  "model": "gpt-5.4-mini",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a logistics assistant."
+    },
+    {
+      "role": "user",
+      "content": "Where is shipment #XP-902?"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_shipment_status",
+        "description": "Get GPS and status for a package",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "tracking_id": { "type": "string" }
+          },
+          "required": ["tracking_id"],
+          "strict": true
+        }
+      }
+    }
+  ],
+  "tool_choice": "auto"
+}

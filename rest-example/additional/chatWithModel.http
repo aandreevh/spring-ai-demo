@@ -1,0 +1,18 @@
+POST {{base_url}}/chat/completions
+Content-Type: application/json
+Authorization: Bearer {{api_key}}
+
+{
+  "model": "gpt-5.4-mini",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Always say 'Bye!' in a new line in the end of the response"
+    },
+    {
+      "role": "user",
+      "content": "Tell me a short joke."
+    }
+  ],
+  "temperature": 0.7
+}

@@ -1,0 +1,39 @@
+### Classify a fruit using GPT-5.4-Mini
+POST {{base_url}}/chat/completions
+Content-Type: application/json
+Authorization: Bearer {{api_key}}
+
+{
+  "model": "gpt-5.4-mini",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a botanical classifier. Categorize the input based on the provided schema."
+    },
+    {
+      "role": "user",
+      "content": "It is yellow, curved, and grows in bunches."
+    }
+  ],
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "fruit_classifier",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "item_name": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": ["Berry", "Pome", "Drupe", "Tropical", "Citrus"]
+          },
+          "is_edible": { "type": "boolean" },
+          "confidence": { "type": "number" }
+        },
+        "required": ["item_name", "category", "is_edible", "confidence"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

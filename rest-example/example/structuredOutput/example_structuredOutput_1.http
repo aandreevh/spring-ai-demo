@@ -1,0 +1,4 @@
+GET {{local_url}}/structuredOutput
+Content-Type: application/text
+
+My tooth hurts I have to go to the dentist.
