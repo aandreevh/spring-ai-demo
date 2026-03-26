@@ -1,0 +1,4 @@
+GET {{local_url}}/advisorsAndMemory/FIRST_CONTEXT
+Content-Type: application/text
+
+What is my name?

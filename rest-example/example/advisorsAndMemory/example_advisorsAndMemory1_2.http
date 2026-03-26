@@ -1,0 +1,4 @@
+GET {{local_url}}/advisorsAndMemory/FIRST_CONTEXT
+Content-Type: application/text
+
+My name is Andrey.
