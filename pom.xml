@@ -11,7 +11,7 @@
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
-        <version.spring.ai>2.0.0-M3</version.spring.ai>
+        <version.spring.ai>2.0.0-M4</version.spring.ai>
     </properties>
 
     <parent>
@@ -29,9 +29,17 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--Boot Starter for OpenAI-->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-openai</artifactId>
+            <version>${version.spring.ai}</version>
+        </dependency>
+
+        <!--MCP client-->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-mcp-client</artifactId>
             <version>${version.spring.ai}</version>
         </dependency>
     </dependencies>

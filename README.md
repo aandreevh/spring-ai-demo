@@ -121,8 +121,8 @@ In `AlarmTool.java`, the `@ToolParam` annotation is vital.
 # In  Future
 
 ##  1
-* RAGs & Vector stores
 * MCP - Creation & Usage
+* RAGs & Vector stores
 * Different memory strategies - Pros & Cons
 
 ## 2
