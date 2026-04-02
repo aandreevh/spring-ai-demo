@@ -1,7 +1,6 @@
 package demo.ai.spring.mcpClient5;
 
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.tool.ToolCallback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import demo.ai.spring.mcpClient5.McpClientConfiguration.ToolsGroup;
 
 
 @RestController
@@ -19,10 +18,13 @@ public class MCPClientRestResource {
 
   @Autowired
   public MCPClientRestResource(final ChatClient.Builder builder,
-      final @Qualifier("tools-file-system") List<ToolCallback> fileSystemTools) {
+      final @Qualifier("tools-file-system") ToolsGroup fileSystemTools,
+      final @Qualifier("tools-sqlite") ToolsGroup sqliteTools) {
 
     this.chatClient = builder
-        .defaultToolCallbacks(fileSystemTools) //register tools to be used by client
+        //register tools to be used by client
+        .defaultToolCallbacks(fileSystemTools.tools())
+        .defaultToolCallbacks(sqliteTools.tools())
         .build();
   }
 
