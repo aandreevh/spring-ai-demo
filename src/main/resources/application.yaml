@@ -1,3 +1,7 @@
+config:
+  mcpClient:
+    #TODO: add path for directory to be used for file system mcp
+    tools-file-system-directory: ${TOOLS_FILE_SYSTEM_DIRECTORY}
 spring:
   ai:
     #Chat Model configuration
@@ -11,4 +15,3 @@ spring:
           temperature: 0.2 # TODO: Explain temperature
           #TODO: Explain tokens & limits
           max-completion-tokens: 1000
-          max-tokens: 2000
