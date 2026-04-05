@@ -1,0 +1,21 @@
+GET {{local_url}}/mcpClient
+Content-Type: application/text
+
+Create three tables in the database:
+
+inventory table containing the following columns:
+id - primary key of item
+name - item name
+count - number of items
+
+orders table containing the following columns:
+order_number - primary key
+
+orders_inventory many to many table containing the following columns:
+order_number - referencing the order
+inventory_id - referencing an item
+count - number of items in the order
+
+order_number and inventory_id must be compoundly unique
+
+Print all the queries you did.
