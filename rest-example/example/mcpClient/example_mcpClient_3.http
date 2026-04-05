@@ -1,0 +1,6 @@
+GET {{local_url}}/mcpClient
+Content-Type: application/text
+
+
+Create a README.md file containing table data from 'inventory', 'orders' and 'orders_inventory'.
+Also write a list of all orders explaining all items and if there are sufficient items into the inventory for the order.

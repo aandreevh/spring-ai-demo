@@ -17,5 +17,3 @@ inventory_id - referencing an item
 count - number of items in the order
 
 order_number and inventory_id must be compoundly unique
-
-Print all the queries you did.

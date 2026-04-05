@@ -25,6 +25,7 @@ public class MCPClientRestResource {
         //register tools to be used by client
         .defaultToolCallbacks(fileSystemTools.tools())
         .defaultToolCallbacks(sqliteTools.tools())
+            .defaultSystem("Append every database query you do in QUERIES.md file.")
         .build();
   }
 
