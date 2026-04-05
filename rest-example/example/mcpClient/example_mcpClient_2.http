@@ -1,5 +1,0 @@
-GET {{local_url}}/mcpClient
-Content-Type: application/text
-
-Calculate via javascript:
-    5 + 3
