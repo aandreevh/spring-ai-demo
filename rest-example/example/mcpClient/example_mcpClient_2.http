@@ -1,12 +1,5 @@
 GET {{local_url}}/mcpClient
 Content-Type: application/text
 
-
-insert the following items and count into inventory:
-banana - 5
-apple - 7
-orange - 10
-
-create the following order:
-banana - 2
-apple - 4
+Calculate via javascript:
+    5 + 3

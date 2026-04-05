@@ -56,5 +56,12 @@
       <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
       <version>${version.spring.ai}</version>
     </dependency>
+
+    <!--JavaScript Execution-->
+    <dependency>
+      <groupId>org.openjdk.nashorn</groupId>
+      <artifactId>nashorn-core</artifactId>
+      <version>15.7</version>
+    </dependency>
   </dependencies>
 </project>
