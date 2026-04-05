@@ -49,5 +49,12 @@
       <artifactId>mcp-json-jackson2</artifactId>
       <version>${version.mcp-json-jackson}</version>
     </dependency>
+
+    <!-- MCP Server -->
+    <dependency>
+      <groupId>org.springframework.ai</groupId>
+      <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
+      <version>${version.spring.ai}</version>
+    </dependency>
   </dependencies>
 </project>

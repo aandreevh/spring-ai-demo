@@ -15,3 +15,7 @@ spring:
           temperature: 0.2 # TODO: Explain temperature
           #TODO: Explain tokens & limits
           max-completion-tokens: 1000
+    mcp:
+      server:
+        protocol: STREAMABLE   # recommended
+        type: SYNC             # default (simple case)
